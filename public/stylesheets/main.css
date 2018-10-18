@@ -1,0 +1,20 @@
+.thumbnail img{
+    width: 100%;
+}
+
+.thumbnail{
+    padding: 0;
+}
+
+.deleteForm{
+    display: inline;
+}
+.jumbotron{
+    background-image: url("https://ae01.alicdn.com/kf/HTB1t36aXCfD8KJjSszhq6zIJFXaq/Studio.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.checked {
+    color: orange;
+}

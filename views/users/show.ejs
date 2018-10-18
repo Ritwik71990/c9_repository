@@ -1,0 +1,31 @@
+<% include ../partials/header %>
+    
+    <div class = "container">
+        <div class = "row">
+            <div class ="col-xs-4" style ="border-right : 1px solid #c0cbdb;">
+                <h1><%=user.firstName + " " + user.lastName %></h1>
+                <div class = thumbnail>   
+                    <img class="img-responsive img-rounded" src = "<%=user.avatar%>" alt="user profile image">
+                    <div class = "caption"><a href="mailto:<%=user.email%>"><%=user.email%></a></div>
+                </div>
+                
+            </div>
+            <div class ="col-xs-8">
+                <h3>Posts By <%=user.firstName + " " + user.lastName %></h3>
+                <hr>
+                <% campgrounds.forEach(function(campground){    %>
+                        <div class="col-xs-6 col-md-3 text-center" style= "display :flex ; flex : flex-wrap;">
+                            <div class = "thumbnail">
+                                <img class="img-responsive img-rounded" src= <%=campground.image%>>
+                                <div class = "caption"><h4> <%=campground.name%> </h4></div>
+                                <p><a href="/campgrounds/<%=campground._id %>" class = "btn btn-primary">More Info</a></p>
+                            </div>
+                            
+                        </div>
+                <%  })  %>
+            </div>
+        </div>
+    </div>
+    
+
+<% include ../partials/footer %>  
